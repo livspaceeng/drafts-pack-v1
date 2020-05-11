@@ -1,0 +1,21 @@
+//Created by: Vyshakh P Rad
+//Maintainer: Vyshakh P Rad
+
+@Library('ls-jx-build-plugin@1.0') _
+
+def APP_NAME = 'REPLACE_ME_APP_NAME';
+def config = [
+    APP_NAME                : "$APP_NAME",
+    ORG                     : "REPLACE_ME_ORG",
+    GIT_PROVIDER            : 'REPLACE_ME_GIT_PROVIDER',
+
+    JX_AGENT                : "%%jxAgentLabel",
+    JX_DEF_CONTAINER        : "%%jxAgent",
+    JX_POD_TEMPLATE_BASE    : "%%jxAgent",
+    JX_HOME                 : "/home/jenkins", 
+    JX_APP_ROOT             : "%%aRoot",
+    JX_BUILD_ROOT           : "%%bRoot",
+    JX_CHARTS_PATH          : "%%bRoot/charts/$APP_NAME",
+];
+
+lsBuild(config) {}

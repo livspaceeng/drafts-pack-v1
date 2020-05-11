@@ -1,0 +1,30 @@
+{{- if .Values.service }}
+apiVersion: v1
+kind: Service
+metadata:
+{{- if .Values.service.name }}
+  name: {{ .Values.service.name }}
+{{- else }}
+  name: {{ template "fullname" . }}
+{{- end }}
+  labels:
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+  annotations:
+    livspace.com/service: {{ .Values.service.name }}
+{{- if .Values.service.annotations }}
+{{ toYaml .Values.service.annotations | indent 4 }}
+{{- end }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+{{- range $ind , $port := .Values.service.ports }}
+  - port: {{ $port.port }}
+    targetPort: {{ $port.targetPort }}
+    name: {{ $port.name }}
+{{- if $port.protocol }}
+    protocol: {{ $port.protocol }}
+{{- end }}
+{{- end }}
+  selector:
+    app: {{ template "fullname" . }}
+{{- end }}

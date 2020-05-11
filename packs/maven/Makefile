@@ -1,0 +1,2 @@
+build:
+	echo "maven build"

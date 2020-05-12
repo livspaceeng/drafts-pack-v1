@@ -1,6 +1,6 @@
 APP:
   appName: REPLACE_ME_APP_NAME
-  Repo: git@gitlab.com:REPLACE_ME_ORG_NAME/REPLACE_ME_GROUP_NAME/REPLACE_ME_APP_NAME.git
+  Repo: git@gitlab.com:REPLACE_ME_ORG/REPLACE_ME_GROUP_NAME/REPLACE_ME_APP_NAME.git
   lang: $PACK
 
 Chart:

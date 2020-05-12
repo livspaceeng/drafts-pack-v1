@@ -1,5 +1,5 @@
 include:
-- project: livspaceengg/devops/build-scripts
+- project: livspaceeng/devops/build-scripts
   ref: build-scripts-branch
   file: /generic-build.yaml
 variables:

@@ -2,8 +2,9 @@
 pack=$1
 appName=$2
 org=$3
+tag=$4
 
-curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master.zip
+curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master/${tag}.zip
 mkdir charting
 unzip chart.zip -d charting
 rm -rf chart.zip

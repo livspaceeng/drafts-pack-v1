@@ -12,3 +12,5 @@ grep -rl 'REPLACE_ME_ORG' ./ | xargs -I@ sed -i "s/REPLACE_ME_ORG/$org/g" @
 grep -rl $pack charts/$appName/Chart.yaml | xargs -I@ sed -i "s/$pack/$appName/g" @
 rm -rf charting
 cd charts/$appName
+make replace
+make release 

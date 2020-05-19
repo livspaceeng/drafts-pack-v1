@@ -1,29 +1,27 @@
 #!/bin/bash
-echo $1
-echo $2
-echo $3
+pack=$1
+appName=$2
+org=$3
 
 curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master.zip
-ls -la
 mkdir charting
 unzip chart.zip -d charting
 rm -rf chart.zip
-ls -la $pwd
-ls -la charting
-mv charting/draft-charts-master/packs/$1/* ./
-find . -depth -type d -name charts -execdir mv {} $2 \;
+mv charting/draft-charts-master/packs/$pack/* ./
+find . -depth -type d -name charts -execdir mv {} $appName \;
 mkdir charts
-mv $2 charts
+mv $appName charts
 mv preview charts
-ls -la $pwd
-grep -rl 'REPLACE_ME_APP_NAME' ./ | xargs -I@ sed -i "s/REPLACE_ME_APP_NAME/$2/g" @
-grep -rl 'REPLACE_ME_ORG' ./ | xargs -I@ sed -i "s/REPLACE_ME_ORG/$3/g" @
-grep -rl $1 charts/$2/Chart.yaml | xargs -I@ sed -i "s/$1/$2/g" @
+grep -rl 'REPLACE_ME_APP_NAME' ./ | xargs -I@ sed -i "s/REPLACE_ME_APP_NAME/$appName/g" @
+grep -rl 'REPLACE_ME_ORG' ./ | xargs -I@ sed -i "s/REPLACE_ME_ORG/$org/g" @
+grep -rl $pack charts/$appName/Chart.yaml | xargs -I@ sed -i "s/$pack/$appName/g" @
 rm -rf charting
-ls -la
 ls -la $pwd
-cd charts/$2
+cd charts/$appName
 ls -la
 ls -la $pwd
 make replace
-make release 
+make release
+~                                                                                                                                                                                                           
+~                                                                                                                                                                                                           
+~                             

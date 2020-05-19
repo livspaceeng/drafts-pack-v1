@@ -1,4 +1,7 @@
 #!/bin/bash
+pack = $1
+appName = $2
+org = $3
 
 curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master.zip
 ls -la

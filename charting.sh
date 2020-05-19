@@ -8,6 +8,7 @@ ls -la
 mkdir charting
 unzip chart.zip -d charting
 rm -rf chart.zip
+ls -la $pwd
 mv charting/draft-charts-master/packs/$pack/* ./
 find . -depth -type d -name charts -execdir mv {} $appName \;
 mkdir charts
@@ -18,7 +19,9 @@ grep -rl 'REPLACE_ME_ORG' ./ | xargs -I@ sed -i "s/REPLACE_ME_ORG/$org/g" @
 grep -rl $pack charts/$appName/Chart.yaml | xargs -I@ sed -i "s/$pack/$appName/g" @
 rm -rf charting
 ls -la
+ls -la $pwd
 cd charts/$appName
 ls -la
+ls -la $pwd
 make replace
 make release 

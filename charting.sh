@@ -1,3 +1,5 @@
+#!/bin/bash
+
 curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master.zip
 mkdir charting
 unzip chart.zip -d charting

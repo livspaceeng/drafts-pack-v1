@@ -9,6 +9,7 @@ mkdir charting
 unzip chart.zip -d charting
 rm -rf chart.zip
 ls -la $pwd
+ls -la charting
 mv charting/draft-charts-master/packs/$pack/* ./
 find . -depth -type d -name charts -execdir mv {} $appName \;
 mkdir charts

@@ -1,9 +1,11 @@
 #!/bin/bash
+
 pack=$1
 appName=$2
 org=$3
 tag=$4
 valuesFile=$5
+
 curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master/${tag}.zip
 mkdir charting
 unzip chart.zip -d charting

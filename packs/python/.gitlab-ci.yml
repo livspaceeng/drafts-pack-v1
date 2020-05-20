@@ -3,6 +3,6 @@ include:
   ref: testBuildBranch
   file: /testBuild.yaml
 variables:
-    BUILD_IMAGE: REPLACE_ME_IMAGE_NAME
+    BUILD_IMAGE: jenkinsxio/builder-python
 Build:
   extends: .Build

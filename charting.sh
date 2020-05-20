@@ -24,5 +24,5 @@ ls -la $pwd
 cd charts/$appName
 ls -la
 ls -la $pwd
-# make replace
-# make release
+make replace
+make release

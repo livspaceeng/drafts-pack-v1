@@ -1,7 +1,7 @@
 include:
 - project: livspaceeng/devops/build-scripts
-  ref: build-scripts-branch
-  file: /generic-build.yaml
+  ref: testBuildBranch
+  file: /testBuild.yaml
 variables:
     BUILD_IMAGE: REPLACE_ME_IMAGE_NAME
 Build:

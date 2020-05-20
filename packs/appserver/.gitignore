@@ -7,3 +7,5 @@
 target
 work
 *.tgz
+charts/REPLACE_ME_APP_NAME/*.git
+./*.git

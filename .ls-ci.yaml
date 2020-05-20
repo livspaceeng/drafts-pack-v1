@@ -1,11 +1,11 @@
-APP:
-  appName: REPLACE_ME_APP_NAME
+application:
+  name: REPLACE_ME_APP_NAME
   org: REPLACE_ME_ORG
   groupName: REPLACE_ME_GROUP_NAME
-  Repo: REPLACE_ME_httpUrl_NAME
+  repo: REPLACE_ME_httpUrl_NAME
   lang: REPLACE_ME_PACK_NAME
 
-Chart:
+chart:
   chartUrl: https://github.com/livspaceeng/draft-charts
   tag: latest
   valuesFile: values.yaml

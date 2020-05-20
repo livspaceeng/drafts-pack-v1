@@ -3,9 +3,6 @@ include:
   ref: build-scripts-branch
   file: /generic-build.yaml
 variables:
-    ORG: REPLACE_ME_ORG
-    APP_NAME: REPLACE_ME_APP_NAME
-    CHARTS_PATH: ./charts/REPLACE_ME_APP_NAME/
     BUILD_IMAGE: REPLACE_ME_IMAGE_NAME
 Build:
   extends: .Build

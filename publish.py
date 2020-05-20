@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from shutil import copyfile
 from string import Template
+import os
 
 class MyTemplate(Template):
     delimiter = '%%'

@@ -6,6 +6,6 @@ application:
   lang: REPLACE_ME_PACK_NAME
 
 draftCharts:
-  Repo: https://github.com/livspaceeng/draft-charts
+  repository: https://github.com/livspaceeng/draft-charts
   tag: latest
   valuesFile: values.yaml

@@ -5,7 +5,7 @@ application:
   repo: REPLACE_ME_httpUrl_NAME
   lang: REPLACE_ME_PACK_NAME
 
-chart:
-  chartUrl: https://github.com/livspaceeng/draft-charts
+draftCharts:
+  repository: https://github.com/livspaceeng/draft-charts
   tag: latest
   valuesFile: values.yaml

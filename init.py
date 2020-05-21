@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import pyyaml
+import yaml
 import sys
 # file = sys.argv[1]
 with open('.ls-ci.yaml', 'r') as stream:

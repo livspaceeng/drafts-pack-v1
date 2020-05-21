@@ -1,7 +1,9 @@
+#!/usr/bin/env python
+
 import yaml
 import sys
-file = sys.argv[1]
-with open(file, 'r') as stream:
+# file = sys.argv[1]
+with open('.ls-ci.yaml', 'r') as stream:
 	config = yaml.safe_load(stream)
 	application = config['application']
 	draftCharts = config['draftCharts']

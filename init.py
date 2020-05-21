@@ -22,7 +22,7 @@ with open('.ls-ci.yaml', 'r') as stream:
 	print("export GROUP_NAME="+GROUP_NAME)
 	print("export REPO="+REPO)
 	print("export LANG="+LANG)
-	print("export CHARTS_REPO="+CHARTS_REPO)
-	print("export TAG="+TAG)
+	# print("export CHARTS_REPO="+CHARTS_REPO)
+	# print("export TAG="+TAG)
 	print("export VALUES_FILE="+VALUES_FILE)
 	

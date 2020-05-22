@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 import yaml
 import sys
 with open('.ls-ci.yaml', 'r') as stream:
@@ -24,4 +23,3 @@ with open('.ls-ci.yaml', 'r') as stream:
 	print("export CHARTS_REPO="+CHARTS_REPO)
 	print("export TAG="+TAG)
 	print("export VALUES_FILE="+VALUES_FILE)
-	

@@ -14,7 +14,7 @@ with open('.ls-ci.yaml', 'r') as stream:
 	CHARTS_REPO = draftCharts['repository']
 	TAG = draftCharts['tag']
 	VALUES_FILE = draftCharts['valuesFile']
-	# print("#!/bin/bash")
+	print("#!/bin/sh")
 	print("export APP_NAME="+APP_NAME)
 	print("export ORG="+ORG)
 	print("export GROUP_NAME="+GROUP_NAME)

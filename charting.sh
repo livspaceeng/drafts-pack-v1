@@ -9,8 +9,6 @@ valuesFile=$5
 if [ -d charts];
 then 
 	cd charts/$appName
-	make replace
-	make release
 else
 	curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master/${tag}.zip
 	mkdir helmCharts
@@ -27,3 +25,5 @@ else
 	grep -rl $pack charts/$appName/Chart.yaml | xargs -I@ sed -i "s/$pack/$appName/g" @
 	rm -rf helmCharts
 fi
+make replace
+make release

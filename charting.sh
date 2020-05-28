@@ -5,8 +5,9 @@ appName=$2
 org=$3
 tag=$4
 valuesFile=$5
+chartsURI=$6
 
-if [ -d charts];
+if [ chartsURI=="charts"];
 then 
 	cd charts/$appName
 else

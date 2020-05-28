@@ -11,7 +11,7 @@ with open('.ls-ci.yaml', 'r') as stream:
 	GROUP_NAME = application['groupName']
 	REPO = application['repo']
 	LANG = application['lang']
-	CHARTS_REPO = helmCharts['uri']
+	CHARTS_URI = helmCharts['uri']
 	TAG = helmCharts['tag']
 	VALUES_FILE = helmCharts['valuesFile']
 	print("#!/bin/sh")
@@ -20,6 +20,6 @@ with open('.ls-ci.yaml', 'r') as stream:
 	print("export GROUP_NAME="+GROUP_NAME)
 	print("export REPO="+REPO)
 	print("export LANG="+LANG)
-	print("export CHARTS_REPO="+CHARTS_REPO)
+	print("export CHARTS_URI="+CHARTS_URI)
 	print("export TAG="+TAG)
 	print("export VALUES_FILE="+VALUES_FILE)

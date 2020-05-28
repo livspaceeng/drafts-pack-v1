@@ -11,11 +11,8 @@ echo $pwd
 # if [ "$chartsURI" == "charts" ];
 if [ -d "$chartsURI" ];
 then 
-	echo "first pass"
-	echo $chartsURI
-	cd charts/$appName
+	cd $chartsURI/$appName
 else
-	echo "second pass"
 	curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master/${tag}.zip
 	mkdir helmCharts
 	unzip chart.zip -d helmCharts

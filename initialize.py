@@ -12,8 +12,14 @@ with open('.ls-ci.yaml', 'r') as stream:
 	REPO = application['repo']
 	LANG = application['lang']
 	CHARTS_URI = helmCharts['uri']
-	TAG = helmCharts['tag']
-	VALUES_FILE = helmCharts['valuesFile']
+	if helmCharts['tag']:
+		TAG = helmCharts['tag']
+	else:
+		TAG = 'latest'
+	if helmCharts['valuesFile']:
+		VALUES_FILE = helmCharts['valuesFile']
+	else:
+		VALUES_FILE = 'valuesFile'
 	print("#!/bin/sh")
 	print("export APP_NAME="+APP_NAME)
 	print("export ORG="+ORG)

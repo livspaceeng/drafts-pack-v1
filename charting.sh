@@ -8,9 +8,10 @@ valuesFile=$5
 chartsURI=$6
 
 echo $pwd
-if [ $chartsURI=="charts" ];
+if [ "$chartsURI" == "charts" ];
 then 
 	echo "first pass"
+	echo $chartsURI
 	cd charts/$appName
 else
 	echo "second pass"

@@ -7,8 +7,8 @@ tag=$4
 valuesFile=$5
 chartsURI=$6
 
-$pwd
-if [ $chartsURI=="charts"];
+echo $pwd
+if [ $chartsURI=="charts" ];
 then 
 	echo "first pass"
 	cd charts/$appName

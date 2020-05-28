@@ -5,15 +5,15 @@ import sys
 with open('.ls-ci.yaml', 'r') as stream:
 	config = yaml.safe_load(stream)
 	application = config['application']
-	draftCharts = config['draftCharts']
+	helmCharts = config['helmCharts']
 	APP_NAME = application['name']
 	ORG = application['org']
 	GROUP_NAME = application['groupName']
 	REPO = application['repo']
 	LANG = application['lang']
-	CHARTS_REPO = draftCharts['repository']
-	TAG = draftCharts['tag']
-	VALUES_FILE = draftCharts['valuesFile']
+	CHARTS_REPO = helmCharts['uri']
+	TAG = helmCharts['tag']
+	VALUES_FILE = helmCharts['valuesFile']
 	print("#!/bin/sh")
 	print("export APP_NAME="+APP_NAME)
 	print("export ORG="+ORG)

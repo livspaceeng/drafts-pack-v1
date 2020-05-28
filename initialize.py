@@ -12,11 +12,11 @@ with open('.ls-ci.yaml', 'r') as stream:
 	REPO = application['repo']
 	LANG = application['lang']
 	CHARTS_URI = helmCharts['uri']
-	if helmCharts['tag']:
+	if helmCharts.has_key('tag'):
 		TAG = helmCharts['tag']
 	else:
 		TAG = 'latest'
-	if helmCharts['valuesFile']:
+	if helmCharts.has_key('valuesFile'):
 		VALUES_FILE = helmCharts['valuesFile']
 	else:
 		VALUES_FILE = 'valuesFile'

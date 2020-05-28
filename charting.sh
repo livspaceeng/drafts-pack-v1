@@ -8,7 +8,8 @@ valuesFile=$5
 chartsURI=$6
 
 echo $pwd
-if [ "$chartsURI" == "charts" ];
+# if [ "$chartsURI" == "charts" ];
+if [ -d "$chartsURI" ];
 then 
 	echo "first pass"
 	echo $chartsURI

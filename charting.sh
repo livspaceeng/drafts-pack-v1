@@ -7,10 +7,13 @@ tag=$4
 valuesFile=$5
 chartsURI=$6
 
+$pwd
 if [ $chartsURI=="charts"];
 then 
+	echo "first pass"
 	cd charts/$appName
 else
+	echo "second pass"
 	curl -o chart.zip -L https://github.com/livspaceeng/draft-charts/archive/master/${tag}.zip
 	mkdir helmCharts
 	unzip chart.zip -d helmCharts
